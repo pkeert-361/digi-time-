@@ -1,0 +1,13 @@
+{
+  "name": "module-04-blog-crud",
+  "version": "1.0.0",
+  "description": "Blog application with Create, Read, Update and Delete operations",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

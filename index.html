@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlogSpace | CRUD Blog Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">BlogSpace<span>.</span></a>
+    <span class="tagline">Write • Share • Discover</span>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p class="eyebrow">MODULE 04 · CRUD OPERATIONS</p>
+      <h1>Your ideas deserve a place.</h1>
+      <p>Create, read, update and delete your blog posts in one simple space.</p>
+    </section>
+
+    <section class="workspace">
+      <div class="form-panel">
+        <h2 id="formHeading">Create a blog</h2>
+        <form id="blogForm">
+          <label for="title">Blog title</label>
+          <input id="title" name="title" maxlength="100" placeholder="Enter your blog title" required>
+
+          <label for="category">Category</label>
+          <select id="category" name="category">
+            <option>General</option>
+            <option>Technology</option>
+            <option>Education</option>
+            <option>Lifestyle</option>
+            <option>Travel</option>
+          </select>
+
+          <label for="content">Your content</label>
+          <textarea id="content" name="content" rows="7" placeholder="Write something interesting..." required></textarea>
+
+          <div class="form-actions">
+            <button class="primary-btn" id="saveButton" type="submit">Publish blog</button>
+            <button class="secondary-btn hidden" id="cancelButton" type="button">Cancel</button>
+          </div>
+          <p id="formMessage" class="message" role="status"></p>
+        </form>
+      </div>
+
+      <div class="blogs-panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE COMMUNITY</p>
+            <h2>Latest blogs</h2>
+          </div>
+          <span id="blogCount" class="count">0 posts</span>
+        </div>
+
+        <div class="filters">
+          <input id="searchInput" type="search" placeholder="Search blogs...">
+          <select id="filterCategory" aria-label="Filter by category">
+            <option value="">All categories</option>
+            <option>General</option>
+            <option>Technology</option>
+            <option>Education</option>
+            <option>Lifestyle</option>
+            <option>Travel</option>
+          </select>
+        </div>
+
+        <div id="blogList" class="blog-list">
+          <p class="empty">Loading blogs...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Built as a Module 04 CRUD Operations project.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
